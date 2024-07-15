@@ -1,1 +1,3 @@
-# Add any third-party libraries here as needed
+# requirements.txt
+# No external dependencies required. Ensure you have Python 3.x installed.
+# Ensure Tkinter is installed (usually included with Python on Windows and Mac).

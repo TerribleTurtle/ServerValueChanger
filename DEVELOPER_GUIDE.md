@@ -1,6 +1,8 @@
-# Developer Guide
+Sure, I can help you update the Developer Guide with the provided information and include the license text. Here’s an updated version:
 
-ALL LINKS ARE PLACEHOLDERS
+---
+
+# Developer Guide
 
 ## Introduction
 
@@ -10,8 +12,8 @@ Welcome to the developer guide for the JSON configuration file editor. This guid
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/TerribleTurtle/turtles-serverconfig.git
-    cd turtles-serverconfig
+    git clone https://github.com/TerribleTurtle/ServerValueChanger.git
+    cd ServerValueChanger
     ```
 
 2. **Create a virtual environment and activate it**:
@@ -66,10 +68,13 @@ Welcome to the developer guide for the JSON configuration file editor. This guid
 
 Please follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
-## License
-
-This project is licensed under the [CC BY-NC](LICENSE).
-
 ## Support
 
-For support, please create an issue on the [GitHub repository](https://github.com/TerribleTurtle/turtles-serverconfig/issues).
+For support, please create an issue on the [GitHub repository](https://github.com/TerribleTurtle/ServerValueChanger/issues).
+
+---
+
+## License
+
+```
+Attribution-NonCommercial 4.0 International

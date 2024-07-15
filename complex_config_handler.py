@@ -1,18 +1,49 @@
-# complex_config_handler.py
+"""
+Module for handling complex configuration updates for StackMaxSize in JSON files.
+
+Classes:
+    ComplexConfigHandler: Handles complex configuration updates for StackMaxSize in JSON files.
+
+Methods:
+    __init__(self, config_manager): Initializes the ComplexConfigHandler with a given configuration manager.
+    update_ammo_stack_size(self, settings, schema): Updates the StackMaxSize for items in JSON configuration files.
+    resolve_full_path(self, file_path): Resolves the full path of a given file path based on the base directory.
+"""
+
 import json
 import os
 import logging
 import tkinter as tk
 
 class ComplexConfigHandler:
+    """
+    Handles complex configuration updates for StackMaxSize in JSON files.
+    """
+
     def __init__(self, config_manager):
+        """
+        Initializes the ComplexConfigHandler with a given configuration manager.
+
+        Args:
+            config_manager: An instance managing configuration settings.
+        """
         self.config_manager = config_manager
 
     def update_ammo_stack_size(self, settings, schema):
+        """
+        Updates the StackMaxSize for items in JSON configuration files based on given settings.
+
+        Args:
+            settings: A dictionary containing the settings from the UI.
+            schema: A dictionary representing the schema of the configuration.
+
+        Returns:
+            A dictionary with file paths as keys and updated content as values.
+        """
         file_changes = {}
 
-        for tab_name, tab_data in schema['tabs'].items():
-            for group_name, group_data in tab_data['groups'].items():
+        for tab_data in schema['tabs'].values():
+            for group_data in tab_data['groups'].values():
                 for setting in group_data['settings']:
                     if setting.get('complex', False) and setting['key_path'] == '_props.StackMaxSize':
                         key_path = setting['key_path']
@@ -23,7 +54,7 @@ class ComplexConfigHandler:
 
                             try:
                                 resolved_file_path = self.resolve_full_path(file_path)
-                                logging.debug(f"Applying complex changes to {resolved_file_path}")
+                                logging.debug("Applying complex changes to %s", resolved_file_path)
 
                                 # Load current content of the JSON file
                                 with open(resolved_file_path, 'r', encoding='utf-8') as file:
@@ -33,7 +64,9 @@ class ComplexConfigHandler:
                                 for item_id, item_data in data.items():
                                     if item_data.get('_parent') == '5485a8684bdc2da71d8b4567':
                                         item_data['_props']['StackMaxSize'] = int(value)
-                                        logging.debug(f"Updated StackMaxSize for item {item_id} to {value}")
+                                        logging.debug(
+                                            "Updated StackMaxSize for item %s to %s", item_id, value
+                                        )
 
                                 # Collect changes to pass to BatchApply
                                 file_changes[file_path] = data
@@ -43,13 +76,25 @@ class ComplexConfigHandler:
                                     json.dump(data, file, ensure_ascii=False, indent=4)
 
                             except FileNotFoundError as e:
-                                logging.error(f"Error applying complex changes: {e}")
+                                logging.error("Error applying complex changes: %s", e)
                             except ValueError as e:
-                                logging.error(f"Error resolving file path: {e}")
+                                logging.error("Error resolving file path: %s", e)
 
         return file_changes
 
     def resolve_full_path(self, file_path):
+        """
+        Resolves the full path of a given file path based on the base directory.
+
+        Args:
+            file_path: A string representing the relative file path.
+
+        Returns:
+            A string representing the full file path.
+
+        Raises:
+            ValueError: If the base directory is unknown.
+        """
         file_base = file_path.split('/', 1)[0]
         if file_base == 'database':
             base_path = self.config_manager.get_setting('paths.server_database')

@@ -1,7 +1,26 @@
-# gui.py
+"""
+This module defines the GUI for the JSON Configuration Editor application.
+
+Classes:
+    Application: Main application class for the JSON Configuration Editor.
+
+Methods (Application class):
+    __init__(self): Initializes the main application window.
+    create_widgets(self): Creates the widgets for the GUI.
+    on_tab_select(self, _event=None): Handles tab selection in the listbox.
+    show_tab_content(self, tab_name): Displays the content of the selected tab.
+    create_widget(self, setting, parent): Creates a widget for a given setting.
+    initialize_defaults(self): Initializes the UI with default values.
+    apply_changes(self): Applies changes made in the GUI to the configuration files.
+    save_preset(self): Saves the current settings as a preset.
+    load_preset(self): Loads a preset and applies it to the UI.
+"""
+
 import tkinter as tk
 from tkinter import messagebox
 import logging
+import json  # Import json to avoid undefined variable error
+
 from config_manager import ConfigManager
 from logger_setup import LoggerSetup
 from batch_apply import BatchApply
@@ -10,6 +29,10 @@ from ui_updater import UIUpdater
 from tooltip import Tooltip
 
 class Application(tk.Tk):
+    """
+    Main application class for the JSON Configuration Editor.
+    """
+
     def __init__(self):
         super().__init__()
         self.title("JSON Configuration Editor")
@@ -21,21 +44,24 @@ class Application(tk.Tk):
         self.preset_manager = PresetManager('presets')
         self.ui_updater = UIUpdater(self.config_manager)
         self.batch_apply = BatchApply(self.config_manager)
-        
+
         logging.debug("Creating widgets")
         self.create_widgets()
-        
+
         logging.debug("Initializing defaults")
         self.initialize_defaults()
 
     def create_widgets(self):
+        """
+        Creates the widgets for the GUI.
+        """
         main_frame = tk.Frame(self)
         main_frame.pack(expand=True, fill="both")
 
         # Left panel for tabs
         left_panel = tk.Frame(main_frame, width=200)
         left_panel.pack(side="left", fill="y")
-        
+
         self.tab_listbox = tk.Listbox(left_panel)
         self.tab_listbox.pack(expand=True, fill="both")
         self.tab_listbox.bind("<<ListboxSelect>>", self.on_tab_select)
@@ -59,7 +85,8 @@ class Application(tk.Tk):
             for group_name, group_data in tab_data['groups'].items():
                 col = group_data['column']
                 group_frame = tk.LabelFrame(self.tabs[tab_name], text=group_name)
-                group_frame.grid(row=len(self.tabs[tab_name].grid_slaves(column=col)), column=col, padx=5, pady=5, sticky="nsew")
+                group_frame.grid(row=len(self.tabs[tab_name].grid_slaves(column=col)),
+                                 column=col, padx=5, pady=5, sticky="nsew")
                 group_frame.grid_columnconfigure(0, weight=1)
                 group_frame.grid_columnconfigure(1, weight=1)
 
@@ -82,20 +109,29 @@ class Application(tk.Tk):
 
         self.show_tab_content(self.tab_listbox.get(0))
 
-    def on_tab_select(self, event):
+    def on_tab_select(self, _event=None):
+        """
+        Handles tab selection in the listbox.
+        """
         if not self.tab_listbox.curselection():
             return  # Return early if there is no selection
         selected_tab = self.tab_listbox.get(self.tab_listbox.curselection())
         self.show_tab_content(selected_tab)
 
     def show_tab_content(self, tab_name):
+        """
+        Displays the content of the selected tab.
+        """
         for tab in self.tabs.values():
             tab.pack_forget()
         self.tabs[tab_name].pack(side="top", fill="both", expand=True)
 
     def create_widget(self, setting, parent):
+        """
+        Creates a widget for a given setting.
+        """
         ui_element = setting['ui_element']
-        
+
         # Determine the row
         inline_with_previous = ui_element.get('inline_with_previous', False)
         if inline_with_previous:
@@ -131,35 +167,58 @@ class Application(tk.Tk):
             entry = tk.Entry(parent, width=ui_element.get('widget_width', 20))
             entry.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="e")
             self.settings[setting['key_path']] = entry
-            logging.debug(f"Created entry widget for {setting['key_path']} with default {setting.get('default')}")
+            logging.debug("Created entry widget for %s with default %s",
+                          setting['key_path'], setting.get('default'))
         elif ui_element['type'] == 'checkbox':
             var = tk.BooleanVar()
             checkbox = tk.Checkbutton(parent, variable=var)
             checkbox.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="e")
             self.settings[setting['key_path']] = var
-            logging.debug(f"Created checkbox widget for {setting['key_path']} with default {setting.get('default')}")
+            logging.debug("Created checkbox widget for %s with default %s",
+                          setting['key_path'], setting.get('default'))
 
     def initialize_defaults(self):
+        """
+        Initializes the UI with default values.
+        """
         logging.debug("Calling initialize_with_defaults")
         self.ui_updater.initialize_with_defaults(self.settings)
 
     def apply_changes(self):
+        """
+        Applies changes made in the GUI to the configuration files.
+        """
         try:
             schema = self.config_manager.get_schema()
             self.batch_apply.apply_changes(self.settings, schema)
             messagebox.showinfo("Info", "Changes have been applied successfully.")
-        except Exception as e:
-            logging.error(f"Error applying changes: {str(e)}")
-            messagebox.showerror("Error", str(e))
+        except FileNotFoundError as e:
+            logging.error("File not found: %s", str(e))
+            messagebox.showerror("Error", f"File not found: {str(e)}")
+        except json.JSONDecodeError as e:
+            logging.error("JSON decoding error: %s", str(e))
+            messagebox.showerror("Error", f"JSON decoding error: {str(e)}")
+        except KeyError as e:
+            logging.error("Key error: %s", str(e))
+            messagebox.showerror("Error", f"Key error: {str(e)}")
+        except Exception as e:   # pylint: disable=broad-exception-caught
+            logging.error("Error applying changes: %s", str(e))
+            messagebox.showerror("Error", f"Unexpected error: {str(e)}")
 
     def save_preset(self):
+        """
+        Saves the current settings as a preset.
+        """
         changes = self.ui_updater.capture_ui_state(self.settings)
         self.preset_manager.save_preset_dialog(changes)
 
     def load_preset(self):
+        """
+        Loads a preset and applies it to the UI.
+        """
         changes = self.preset_manager.load_preset_dialog()
         if changes:
-            logging.info(f"Changes loaded: {changes}")
+            logging.info("Changes loaded: %s", changes)
             self.ui_updater.update_ui_with_preset(self.settings, changes)
             messagebox.showinfo("Info", "Preset loaded successfully.")
         else:

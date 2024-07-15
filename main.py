@@ -1,13 +1,23 @@
-# main.py
+"""
+Main module to initialize the configuration manager, set up logging, validate directories,
+and launch the GUI application.
+
+Functions:
+    main(): Main function to set up and launch the application.
+"""
+
 from config_manager import ConfigManager
 from logger_setup import LoggerSetup
 from directory_validator import DirectoryValidator
 from gui import Application
 
 def main():
+    """
+    Main function to set up and launch the application.
+    """
     # Initialize the configuration manager
     config_manager = ConfigManager('config.json', 'config_schema.json')
-    
+
     # Set up logging
     LoggerSetup(config_manager)
 

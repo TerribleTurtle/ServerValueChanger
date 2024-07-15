@@ -1,14 +1,40 @@
-# logger_setup.py
+"""
+LoggerSetup Module
+
+This module provides the LoggerSetup class, which configures logging for the application using settings
+from a configuration manager. It sets up file and stream handlers, configures log levels, and ensures
+that log directories exist.
+
+Classes:
+    LoggerSetup: Configures logging based on settings from a configuration manager.
+
+Methods:
+    __init__(self, config_manager): Initializes LoggerSetup and configures logging.
+    configure_logging(self): Configures logging settings.
+    close_handlers(): Closes all handlers of the root logger.
+"""
+
 import logging
 import os
-from config_manager import ConfigManager
 
 class LoggerSetup:
+    """
+    LoggerSetup configures logging for the application using settings from a config manager.
+    """
+
     def __init__(self, config_manager):
+        """
+        Initialize LoggerSetup with a config manager and configure logging.
+
+        :param config_manager: Instance of ConfigManager to get logging settings.
+        """
         self.config_manager = config_manager
         self.configure_logging()
 
     def configure_logging(self):
+        """
+        Configure logging settings using the config manager.
+        """
         log_level = self.config_manager.get_setting('logging.level')
         log_file = self.config_manager.get_setting('logging.file')
 
@@ -28,11 +54,14 @@ class LoggerSetup:
         root_logger.setLevel(log_level)
 
         # Debug statements to verify configuration
-        root_logger.debug(f"Logger configured with level: {log_level}")
-        root_logger.debug(f"Logger handlers: {root_logger.handlers}")
+        root_logger.debug("Logger configured with level: %s", log_level)
+        root_logger.debug("Logger handlers: %s", root_logger.handlers)
 
     @staticmethod
     def close_handlers():
+        """
+        Close all handlers of the root logger.
+        """
         root_logger = logging.getLogger()
         handlers = root_logger.handlers[:]
         for handler in handlers:

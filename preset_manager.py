@@ -6,8 +6,9 @@ Classes:
                    file dialogs for user interaction.
 
 Methods (PresetManager class):
-    __init__(self, preset_directory='presets'): Initializes the PresetManager with a preset directory.
-    save_preset(self, preset_path, changes): Saves the given changes to the specified preset path in JSON format.
+    __init__(self, preset_directory='presets', config_schema_path='config_schema.json'): Initializes the PresetManager with a preset directory and loads the config schema.
+    _load_labels_mapping(self): Loads the labels mapping from the config schema file.
+    save_preset(self, preset_path, changes): Saves the given changes to the specified preset path in JSON format, including labels.
     load_preset(self, preset_path): Loads and returns the changes from the specified preset path in JSON format.
     save_preset_dialog(self, changes): Opens a dialog to save the preset and saves the given changes.
     load_preset_dialog(self): Opens a dialog to load a preset and returns the loaded changes.
@@ -22,21 +23,55 @@ class PresetManager:
     """
     Manages saving and loading of presets.
     """
-    def __init__(self, preset_directory='presets'):
+    def __init__(self, preset_directory='presets', config_schema_path='config_schema.json'):
         """
-        Initializes the PresetManager with a preset directory.
+        Initializes the PresetManager with a preset directory and loads the config schema.
         """
         self.preset_directory = os.path.join(os.path.dirname(__file__), preset_directory)
         if not os.path.exists(self.preset_directory):
             os.makedirs(self.preset_directory)
 
-    def save_preset(self, preset_path, changes):
+        # Load the configuration schema
+        self.config_schema_path = config_schema_path
+        self.labels_mapping = self._load_labels_mapping()
+
+    def _load_labels_mapping(self):
         """
-        Saves the given changes to the specified preset path in JSON format.
+        Loads the labels mapping from the config schema file.
         """
         try:
+            with open(self.config_schema_path, 'r', encoding='utf-8') as f:
+                config_schema = json.load(f)
+
+            labels_mapping = {}
+            for tab_data in config_schema.get("tabs", {}).values():
+                for group_data in tab_data.get("groups", {}).values():
+                    for setting in group_data.get("settings", []):
+                        key_path = setting.get("key_path")
+                        label = setting.get("label")
+                        if key_path and label:
+                            labels_mapping[key_path] = label
+
+            return labels_mapping
+        except (IOError, json.JSONDecodeError) as e:
+            logging.error("Failed to load config schema: %s", str(e))
+            return {}
+
+    def save_preset(self, preset_path, changes):
+        """
+        Saves the given changes to the specified preset path in JSON format, including labels.
+        """
+        try:
+            annotated_changes = {}
+            for key_path, value in changes.items():
+                label = self.labels_mapping.get(key_path, "Unknown")
+                annotated_changes[key_path] = {
+                    "label": label,
+                    "value": value
+                }
+
             with open(preset_path, 'w', encoding='utf-8') as f:
-                json.dump(changes, f, ensure_ascii=False, indent=4)
+                json.dump(annotated_changes, f, ensure_ascii=False, indent=4)
             logging.info("Preset '%s' saved successfully.", os.path.basename(preset_path))
         except (IOError, json.JSONDecodeError) as e:
             logging.error("Failed to save preset '%s': %s", os.path.basename(preset_path), str(e))
@@ -48,7 +83,9 @@ class PresetManager:
         try:
             logging.info("Loading preset from path: %s", preset_path)
             with open(preset_path, 'r', encoding='utf-8') as f:
-                changes = json.load(f)
+                annotated_changes = json.load(f)
+
+            changes = {key_path: data["value"] for key_path, data in annotated_changes.items()}
             logging.info("Preset '%s' loaded successfully.", os.path.basename(preset_path))
             logging.debug("Preset contents: %s", changes)
             return changes

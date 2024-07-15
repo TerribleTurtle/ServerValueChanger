@@ -1,0 +1,453 @@
+2024-07-15 00:04:48,601 - root - DEBUG - Logger configured with level: 10
+2024-07-15 00:04:48,601 - root - DEBUG - Logger handlers: [<FileHandler S:\git_project\servervaluechanger\app.log (NOTSET)>, <StreamHandler <stderr> (NOTSET)>]
+2024-07-15 00:04:48,601 - root - INFO - All required paths are present.
+2024-07-15 00:04:48,633 - root - INFO - Configuration file loaded successfully.
+2024-07-15 00:04:48,634 - root - INFO - Schema file loaded successfully.
+2024-07-15 00:04:48,634 - root - DEBUG - Logger configured with level: 10
+2024-07-15 00:04:48,634 - root - DEBUG - Logger handlers: [<FileHandler S:\git_project\servervaluechanger\app.log (NOTSET)>, <StreamHandler <stderr> (NOTSET)>]
+2024-07-15 00:04:48,634 - root - DEBUG - Creating widgets
+2024-07-15 00:04:48,635 - root - DEBUG - Created entry widget for _props.StackMaxSize with default 60
+2024-07-15 00:04:48,635 - root - DEBUG - Created entry widget for healthMultipliers.death with default 0.3
+2024-07-15 00:04:48,635 - root - DEBUG - Created entry widget for appearance.body.5d5e7e7586f77427997cfb7f with default 9
+2024-07-15 00:04:48,636 - root - DEBUG - Created entry widget for appearance.body.5cc2e5d014c02e15d53d9c03 with default 8
+2024-07-15 00:04:48,636 - root - DEBUG - Created checkbox widget for features.chatbotFeatures.commandoEnabled with default True
+2024-07-15 00:04:48,636 - root - DEBUG - Created entry widget for generatorSpeedWithoutFuel with default 0.07
+2024-07-15 00:04:48,636 - root - DEBUG - Creating bottom panel for buttons
+2024-07-15 00:04:48,636 - root - DEBUG - Initializing defaults
+2024-07-15 00:04:48,636 - root - DEBUG - Calling initialize_with_defaults
+2024-07-15 00:04:48,636 - root - DEBUG - Setting default for _props.StackMaxSize to 60
+2024-07-15 00:04:48,637 - root - DEBUG - Setting default for healthMultipliers.death to 0.3
+2024-07-15 00:04:48,637 - root - DEBUG - Setting default for appearance.body.5d5e7e7586f77427997cfb7f to 9
+2024-07-15 00:04:48,637 - root - DEBUG - Setting default for appearance.body.5cc2e5d014c02e15d53d9c03 to 8
+2024-07-15 00:04:48,637 - root - DEBUG - Setting default for features.chatbotFeatures.commandoEnabled to True
+2024-07-15 00:04:48,637 - root - DEBUG - Setting default for generatorSpeedWithoutFuel to 0.07
+2024-07-15 00:04:52,945 - root - INFO - Selected preset path: S:/git_project/servervaluechanger/presets/cat.json
+2024-07-15 00:04:52,945 - root - INFO - Loading preset from path: S:/git_project/servervaluechanger/presets/cat.json
+2024-07-15 00:04:52,945 - root - INFO - Preset 'cat.json' loaded successfully.
+2024-07-15 00:04:52,945 - root - DEBUG - Preset contents: {'_props.StackMaxSize': '100', 'healthMultipliers.death': '100', 'appearance.body.5d5e7e7586f77427997cfb7f': '100', 'appearance.body.5cc2e5d014c02e15d53d9c03': '100', 'features.chatbotFeatures.commandoEnabled': False}
+2024-07-15 00:04:52,945 - root - INFO - Changes loaded: {'_props.StackMaxSize': '100', 'healthMultipliers.death': '100', 'appearance.body.5d5e7e7586f77427997cfb7f': '100', 'appearance.body.5cc2e5d014c02e15d53d9c03': '100', 'features.chatbotFeatures.commandoEnabled': False}
+2024-07-15 00:04:55,073 - root - DEBUG - Applying complex changes to S:/server config test/SPT_Data/Server/database\templates/items.json
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5d6e68dea4b9361bcc29e659 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5d6e6911a4b9361bd5780d52 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5d6e6772a4b936088465b17c to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5cde8864d7f00c0010373be1 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5cadf6e5ae921500113bb973 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 560d5e524bdc2d25448b4571 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5656eb674bdc2d35148b457c to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5ea2a8e200685063ec28c05a to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5cadf6eeae921500134b2799 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5e81f423763d9f754677bf2e to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5cadf6ddae9215051e1c23b2 to 100
+2024-07-15 00:04:55,174 - root - DEBUG - Updated StackMaxSize for item 5c0d591486f7744c505b416f to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5efb0d4f4bc50b58e81710f3 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d2f2ab648f03550091993ca to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5efb0cabfb3e451d70735af5 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5efb0fc6aeb21837e749c801 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e67fba4b9361bc73bc779 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e6806a4b936088465b17e to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e68d1a4b93622fe60e845 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e6869a4b9361c140bcfde to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 62389ba9a63f32501b1b4451 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e68c4a4b9361b93413f79 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e6a42a4b9364f07165f52 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e6a05a4b93618084f58d0 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e6891a4b9361bd473feea to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5f647f31b6238e5dd066e196 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e68b3a4b9361bca7e50b5 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 59e6920f86f77411d82aa167 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e68a8a4b9360b6c0d54e2 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5e85aa1a988a8701445df1f5 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5ede47405b097655935d7d16 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5a38ebd9c4a282000d722a5b to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d6e69b9a4b9361bc8618958 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5f0c892565703e5c461894e9 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5d70e500a4b9364de70d38ce to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5ede474b0c226a66f5402622 to 100
+2024-07-15 00:04:55,175 - root - DEBUG - Updated StackMaxSize for item 5ba26812d4351e003201fef1 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff338d2720bbd668b4569 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff3afd2720bba668b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff421d2720b5f5a8b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 58820d1224597753c90aeb13 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5d6e695fa4b936359b35d852 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff026d2720bb8668b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 54527a984bdc2d4e668b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 59e690b686f7746c9f75e848 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5d6e689ca4b9361bc8618956 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5d6e69c7a4b9360b6c0d54e4 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5ede4739e0350d05467f73e8 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5ba26844d4351e00334c9475 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 54527ac44bdc2d36668b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5c0d5e4486f77478390952fe to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff4ecd2720b5f5a8b4568 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5f0596629e22f464da6bbdd9 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 59e6927d86f77411da468256 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5e85a9f4add9fe03027d9bf1 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5d6e6a5fa4b93614ec501745 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 62389bc9423ed1685422dc57 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 59e6658b86f77411d949b250 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dfef82d2720bbd668b4567 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 56dff216d2720bbd668b4568 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 59e68f6f86f7746c9f75e846 to 100
+2024-07-15 00:04:55,176 - root - DEBUG - Updated StackMaxSize for item 5ede475339ee016e8c534742 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 61962b617c6c7b169525f168 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 56dff061d2720bb5668b4567 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 59e6918f86f7746c9f75e849 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 62389be94d5d474bf712e709 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 59e655cb86f77411dc52a77b to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 5d6e68e6a4b9361c140bcfe0 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 59e6542b86f77411dc52a77a to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 56dff0bed2720bb0668b4567 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 56dff4a2d2720bbd668b456a to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 5d6e6a53a4b9361bd473feec to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 62389aaba63f32501b1b444f to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 5e85a9a6eacf8c039e4e2ac1 to 100
+2024-07-15 00:04:55,177 - root - DEBUG - Updated StackMaxSize for item 5ba26835d4351e0035628ff5 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 56dff2ced2720bb4668b4567 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 59e6906286f7746c9f75e847 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5ede475b549eed7c6d5c18fb to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5ba2678ad4351e44f824b344 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5a26ac06c4a282000c5a90a8 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 60194943740c5d77f6705eea to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5cc80f38e4a949001152b560 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 57371eb62459776125652ac1 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5c3df7d588a4501f290594e5 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5cc86832d7f00c000d3a6e6c to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5cc86840d7f00c002412c56c to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 64b8f7b5389d7ffd620ccba2 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5cc80f53e4a949000e1ea4f8 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5efb0da7a29a85116f6ea05f to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5fc382a9d724d907e2077dab to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 601949593ae8f707c4608daa to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5c0d688c86f77413ae3407b2 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5efb0e16aeb21837e749c7ff to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5c0d668f86f7747ccb7f13b2 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 5887431f2459777e1612938f to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 573718ba2459775a75491131 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 573719df2459775a626ccbc2 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 573601b42459776410737435 to 100
+2024-07-15 00:04:55,178 - root - DEBUG - Updated StackMaxSize for item 6196365d58ef8c428c287da1 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 624c0570c9b794431568f5d5 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5996f6cb86f774678763a6ca to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5e023e6e34d52a55c3304f71 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 619636be6db0f2477964e710 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5cc80f67e4a949035e43bbba to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5c0d5ae286f7741e46554302 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 573719762459775a626ccbc1 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 58864a4f2459770fcc257101 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 64b8f7c241772715af0f9c3d to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 6241c316234b593b5676b637 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 57371f2b24597761224311f1 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5737207f24597760ff7b25f2 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 624c09e49b98e019a3315b66 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5656d7c34bdc2d9d198b4587 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 64b7af5a8532cf95ee0a0dbd to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5a608bf24f39f98ffc77720e to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5fc275cf85fd526b824a571a to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 61962d879bb3d20b0946d385 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 64b8f7968532cf95ee0a0dbf to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 6576f4708ca9c4381d16cd9d to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 59e4cf5286f7741778269d8a to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5736026a245977644601dc61 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 58dd3ad986f77403051cba8f to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 57371f8d24597761006c6a81 to 100
+2024-07-15 00:04:55,179 - root - DEBUG - Updated StackMaxSize for item 5c0d56a986f774449d5de529 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5a26abfac4a28232980eabff to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 59e77a2386f7742ee578960a to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 64b7bbb74b75259c590fa897 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5943d9c186f7745a13413ac9 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 56d59d3ad2720bdb418b4577 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 57a0e5022459774d1673f889 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5996f6d686f77467977ba6cc to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 624c09cfbc2e27219346d955 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 64b7af434b75259c590fa893 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 63b35f281745dd52341e5da7 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5a269f97c4a282000b151807 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 62330c40bdd19b369e1e53d1 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 64b7af734b75259c590fa895 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5fbe3ffdf8b6a877a729ea82 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5737218f245977612125ba51 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 57371b192459775a9f58a5e0 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5c925fa22e221601da359b7b to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 6576f93989f0062e741ba952 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 62330c18744e5e31df12f516 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5efb0c1bd79ff02a1f5e68d9 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 62330bfadc5883093563729b to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5fc382c1016cce60e8341b20 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 573603562459776430731618 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 573603c924597764442bd9cb to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5735fdcd2459776445391d61 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 64b8725c4b75259c590fa899 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5cc80f8fe4a949033b0224a2 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 5cc80f79e4a949033c7343b2 to 100
+2024-07-15 00:04:55,180 - root - DEBUG - Updated StackMaxSize for item 57a0dfb82459774d3078b56c to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5a3c16fe86f77452b62de32a to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 6196364158ef8c428c287d9f to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5737201124597760fc4431f1 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 6576f96220d53a5b8f3e395e to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5a26ac0ec4a28200741e1e18 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 62330b3ed4dc74626d570b95 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 560d61e84bdc2da74d8b4571 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 57371aab2459775a77142f22 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5735ff5c245977640e39ba7e to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5996f6fc86f7745e585b4de3 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5e023cf8186a883be655e54f to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5e023e88277cce2b522ff2b1 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 57372140245977611f70ee91 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 624c09da2cec124eb67c1046 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5e023e53d4353e3302577c4c to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 573720e02459776143012541 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 601aa3d2b2bcb34913271e6d to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5fd20ff893a8961fc660a954 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 59e0d99486f7744a32234762 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 59e4d3d286f774176a36250a to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 5a6086ea4f39f99cd479502f to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 59e4d24686f7741776641ac7 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 635267f063651329f75a4ee8 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 6529243824cbe3c74a05e5c1 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 64b8ee384b75259c590fa89b to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 64b6979341772715af0f9c39 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 57371e4124597760ff7b25f1 to 100
+2024-07-15 00:04:55,181 - root - DEBUG - Updated StackMaxSize for item 6601546f86889319850bd566 to 100
+2024-07-15 00:04:55,182 - root - DEBUG - Updated StackMaxSize for item 5fc382b6d6fa9c00c571bbc3 to 100
+2024-07-15 00:04:55,182 - root - DEBUG - Updated StackMaxSize for item 5e023d48186a883be655e551 to 100
+2024-07-15 00:04:55,182 - root - DEBUG - Updated StackMaxSize for item 5e023d34e8a400319a28ed44 to 100
+2024-07-15 00:04:55,182 - root - DEBUG - Updated StackMaxSize for item 573602322459776445391df1 to 100
+2024-07-15 00:04:55,182 - root - DEBUG - Updated StackMaxSize for item 6529302b8c26af6326029fb7 to 100
+2024-07-15 00:04:55,470 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/configs\health.json
+2024-07-15 00:04:55,471 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/configs\health.json - healthMultipliers.death: 100
+2024-07-15 00:04:55,471 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/configs\health.json
+2024-07-15 00:04:55,471 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json
+2024-07-15 00:04:55,478 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json - appearance.body.5d5e7e7586f77427997cfb7f: 100
+2024-07-15 00:04:55,478 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json - appearance.body.5cc2e5d014c02e15d53d9c03: 100
+2024-07-15 00:04:55,481 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json
+2024-07-15 00:04:55,481 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/configs\core.json
+2024-07-15 00:04:55,482 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/configs\core.json - features.chatbotFeatures.commandoEnabled: False
+2024-07-15 00:04:55,482 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/configs\core.json
+2024-07-15 00:04:55,482 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/database\hideout/settings.json.
+2024-07-15 00:04:55,483 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\hideout/settings.json. - generatorSpeedWithoutFuel: 0.07
+2024-07-15 00:04:55,483 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/database\hideout/settings.json.
+2024-07-15 00:05:03,851 - root - DEBUG - Saving preset with changes: {'_props.StackMaxSize': '100', 'healthMultipliers.death': '100', 'appearance.body.5d5e7e7586f77427997cfb7f': '100', 'appearance.body.5cc2e5d014c02e15d53d9c03': '100', 'features.chatbotFeatures.commandoEnabled': False, 'generatorSpeedWithoutFuel': '0.07'}
+2024-07-15 00:05:03,851 - root - INFO - Preset 'cat.json' saved successfully.
+2024-07-15 00:05:10,603 - root - DEBUG - Logger configured with level: 10
+2024-07-15 00:05:10,603 - root - DEBUG - Logger handlers: [<FileHandler S:\git_project\servervaluechanger\app.log (NOTSET)>, <StreamHandler <stderr> (NOTSET)>]
+2024-07-15 00:05:10,603 - root - INFO - All required paths are present.
+2024-07-15 00:05:10,634 - root - INFO - Configuration file loaded successfully.
+2024-07-15 00:05:10,634 - root - INFO - Schema file loaded successfully.
+2024-07-15 00:05:10,634 - root - DEBUG - Logger configured with level: 10
+2024-07-15 00:05:10,634 - root - DEBUG - Logger handlers: [<FileHandler S:\git_project\servervaluechanger\app.log (NOTSET)>, <StreamHandler <stderr> (NOTSET)>]
+2024-07-15 00:05:10,634 - root - DEBUG - Creating widgets
+2024-07-15 00:05:10,635 - root - DEBUG - Created entry widget for _props.StackMaxSize with default 60
+2024-07-15 00:05:10,635 - root - DEBUG - Created entry widget for healthMultipliers.death with default 0.3
+2024-07-15 00:05:10,636 - root - DEBUG - Created entry widget for appearance.body.5d5e7e7586f77427997cfb7f with default 9
+2024-07-15 00:05:10,636 - root - DEBUG - Created entry widget for appearance.body.5cc2e5d014c02e15d53d9c03 with default 8
+2024-07-15 00:05:10,636 - root - DEBUG - Created checkbox widget for features.chatbotFeatures.commandoEnabled with default True
+2024-07-15 00:05:10,636 - root - DEBUG - Created entry widget for generatorSpeedWithoutFuel with default 0.07
+2024-07-15 00:05:10,636 - root - DEBUG - Creating bottom panel for buttons
+2024-07-15 00:05:10,636 - root - DEBUG - Initializing defaults
+2024-07-15 00:05:10,636 - root - DEBUG - Calling initialize_with_defaults
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for _props.StackMaxSize to 60
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for healthMultipliers.death to 0.3
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for appearance.body.5d5e7e7586f77427997cfb7f to 9
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for appearance.body.5cc2e5d014c02e15d53d9c03 to 8
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for features.chatbotFeatures.commandoEnabled to True
+2024-07-15 00:05:10,637 - root - DEBUG - Setting default for generatorSpeedWithoutFuel to 0.07
+2024-07-15 00:05:14,371 - root - DEBUG - Applying complex changes to S:/server config test/SPT_Data/Server/database\templates/items.json
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 5d6e68dea4b9361bcc29e659 to 60
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 5d6e6911a4b9361bd5780d52 to 60
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 5d6e6772a4b936088465b17c to 60
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 5cde8864d7f00c0010373be1 to 60
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 5cadf6e5ae921500113bb973 to 60
+2024-07-15 00:05:14,474 - root - DEBUG - Updated StackMaxSize for item 560d5e524bdc2d25448b4571 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5656eb674bdc2d35148b457c to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5ea2a8e200685063ec28c05a to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5cadf6eeae921500134b2799 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5e81f423763d9f754677bf2e to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5cadf6ddae9215051e1c23b2 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5c0d591486f7744c505b416f to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5efb0d4f4bc50b58e81710f3 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d2f2ab648f03550091993ca to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5efb0cabfb3e451d70735af5 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5efb0fc6aeb21837e749c801 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e67fba4b9361bc73bc779 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e6806a4b936088465b17e to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e68d1a4b93622fe60e845 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e6869a4b9361c140bcfde to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 62389ba9a63f32501b1b4451 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e68c4a4b9361b93413f79 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e6a42a4b9364f07165f52 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e6a05a4b93618084f58d0 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e6891a4b9361bd473feea to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5f647f31b6238e5dd066e196 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e68b3a4b9361bca7e50b5 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 59e6920f86f77411d82aa167 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5d6e68a8a4b9360b6c0d54e2 to 60
+2024-07-15 00:05:14,475 - root - DEBUG - Updated StackMaxSize for item 5e85aa1a988a8701445df1f5 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5ede47405b097655935d7d16 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5a38ebd9c4a282000d722a5b to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d6e69b9a4b9361bc8618958 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5f0c892565703e5c461894e9 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d70e500a4b9364de70d38ce to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5ede474b0c226a66f5402622 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5ba26812d4351e003201fef1 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 56dff338d2720bbd668b4569 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 56dff3afd2720bba668b4567 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 56dff421d2720b5f5a8b4567 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 58820d1224597753c90aeb13 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d6e695fa4b936359b35d852 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 56dff026d2720bb8668b4567 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 54527a984bdc2d4e668b4567 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 59e690b686f7746c9f75e848 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d6e689ca4b9361bc8618956 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d6e69c7a4b9360b6c0d54e4 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5ede4739e0350d05467f73e8 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5ba26844d4351e00334c9475 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 54527ac44bdc2d36668b4567 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5c0d5e4486f77478390952fe to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 56dff4ecd2720b5f5a8b4568 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5f0596629e22f464da6bbdd9 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 59e6927d86f77411da468256 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5e85a9f4add9fe03027d9bf1 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 5d6e6a5fa4b93614ec501745 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 62389bc9423ed1685422dc57 to 60
+2024-07-15 00:05:14,476 - root - DEBUG - Updated StackMaxSize for item 59e6658b86f77411d949b250 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dfef82d2720bbd668b4567 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dff216d2720bbd668b4568 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 59e68f6f86f7746c9f75e846 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5ede475339ee016e8c534742 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 61962b617c6c7b169525f168 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dff061d2720bb5668b4567 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 59e6918f86f7746c9f75e849 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 62389be94d5d474bf712e709 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 59e655cb86f77411dc52a77b to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5d6e68e6a4b9361c140bcfe0 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 59e6542b86f77411dc52a77a to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dff0bed2720bb0668b4567 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dff4a2d2720bbd668b456a to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5d6e6a53a4b9361bd473feec to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 62389aaba63f32501b1b444f to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5e85a9a6eacf8c039e4e2ac1 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5ba26835d4351e0035628ff5 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 56dff2ced2720bb4668b4567 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 59e6906286f7746c9f75e847 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5ede475b549eed7c6d5c18fb to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5ba2678ad4351e44f824b344 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5a26ac06c4a282000c5a90a8 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 60194943740c5d77f6705eea to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5cc80f38e4a949001152b560 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 57371eb62459776125652ac1 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5c3df7d588a4501f290594e5 to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5cc86832d7f00c000d3a6e6c to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 5cc86840d7f00c002412c56c to 60
+2024-07-15 00:05:14,477 - root - DEBUG - Updated StackMaxSize for item 64b8f7b5389d7ffd620ccba2 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5cc80f53e4a949000e1ea4f8 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5efb0da7a29a85116f6ea05f to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5fc382a9d724d907e2077dab to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 601949593ae8f707c4608daa to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5c0d688c86f77413ae3407b2 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5efb0e16aeb21837e749c7ff to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5c0d668f86f7747ccb7f13b2 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5887431f2459777e1612938f to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 573718ba2459775a75491131 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 573719df2459775a626ccbc2 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 573601b42459776410737435 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 6196365d58ef8c428c287da1 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 624c0570c9b794431568f5d5 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5996f6cb86f774678763a6ca to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5e023e6e34d52a55c3304f71 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 619636be6db0f2477964e710 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5cc80f67e4a949035e43bbba to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5c0d5ae286f7741e46554302 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 573719762459775a626ccbc1 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 58864a4f2459770fcc257101 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 64b8f7c241772715af0f9c3d to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 6241c316234b593b5676b637 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 57371f2b24597761224311f1 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5737207f24597760ff7b25f2 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 624c09e49b98e019a3315b66 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5656d7c34bdc2d9d198b4587 to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 64b7af5a8532cf95ee0a0dbd to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5a608bf24f39f98ffc77720e to 60
+2024-07-15 00:05:14,478 - root - DEBUG - Updated StackMaxSize for item 5fc275cf85fd526b824a571a to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 61962d879bb3d20b0946d385 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 64b8f7968532cf95ee0a0dbf to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 6576f4708ca9c4381d16cd9d to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 59e4cf5286f7741778269d8a to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5736026a245977644601dc61 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 58dd3ad986f77403051cba8f to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 57371f8d24597761006c6a81 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5c0d56a986f774449d5de529 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5a26abfac4a28232980eabff to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 59e77a2386f7742ee578960a to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 64b7bbb74b75259c590fa897 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5943d9c186f7745a13413ac9 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 56d59d3ad2720bdb418b4577 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 57a0e5022459774d1673f889 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5996f6d686f77467977ba6cc to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 624c09cfbc2e27219346d955 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 64b7af434b75259c590fa893 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 63b35f281745dd52341e5da7 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5a269f97c4a282000b151807 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 62330c40bdd19b369e1e53d1 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 64b7af734b75259c590fa895 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5fbe3ffdf8b6a877a729ea82 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5737218f245977612125ba51 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 57371b192459775a9f58a5e0 to 60
+2024-07-15 00:05:14,479 - root - DEBUG - Updated StackMaxSize for item 5c925fa22e221601da359b7b to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 6576f93989f0062e741ba952 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 62330c18744e5e31df12f516 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5efb0c1bd79ff02a1f5e68d9 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 62330bfadc5883093563729b to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5fc382c1016cce60e8341b20 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 573603562459776430731618 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 573603c924597764442bd9cb to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5735fdcd2459776445391d61 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 64b8725c4b75259c590fa899 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5cc80f8fe4a949033b0224a2 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5cc80f79e4a949033c7343b2 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 57a0dfb82459774d3078b56c to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5a3c16fe86f77452b62de32a to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 6196364158ef8c428c287d9f to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5737201124597760fc4431f1 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 6576f96220d53a5b8f3e395e to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5a26ac0ec4a28200741e1e18 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 62330b3ed4dc74626d570b95 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 560d61e84bdc2da74d8b4571 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 57371aab2459775a77142f22 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5735ff5c245977640e39ba7e to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5996f6fc86f7745e585b4de3 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5e023cf8186a883be655e54f to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 5e023e88277cce2b522ff2b1 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 57372140245977611f70ee91 to 60
+2024-07-15 00:05:14,480 - root - DEBUG - Updated StackMaxSize for item 624c09da2cec124eb67c1046 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5e023e53d4353e3302577c4c to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 573720e02459776143012541 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 601aa3d2b2bcb34913271e6d to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5fd20ff893a8961fc660a954 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 59e0d99486f7744a32234762 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 59e4d3d286f774176a36250a to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5a6086ea4f39f99cd479502f to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 59e4d24686f7741776641ac7 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 635267f063651329f75a4ee8 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 6529243824cbe3c74a05e5c1 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 64b8ee384b75259c590fa89b to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 64b6979341772715af0f9c39 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 57371e4124597760ff7b25f1 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 6601546f86889319850bd566 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5fc382b6d6fa9c00c571bbc3 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5e023d48186a883be655e551 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 5e023d34e8a400319a28ed44 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 573602322459776445391df1 to 60
+2024-07-15 00:05:14,481 - root - DEBUG - Updated StackMaxSize for item 6529302b8c26af6326029fb7 to 60
+2024-07-15 00:05:14,770 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/configs\health.json
+2024-07-15 00:05:14,771 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/configs\health.json - healthMultipliers.death: 0.3
+2024-07-15 00:05:14,771 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/configs\health.json
+2024-07-15 00:05:14,771 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json
+2024-07-15 00:05:14,778 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json - appearance.body.5d5e7e7586f77427997cfb7f: 9
+2024-07-15 00:05:14,778 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json - appearance.body.5cc2e5d014c02e15d53d9c03: 8
+2024-07-15 00:05:14,782 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/database\bots/types/arenafighter.json
+2024-07-15 00:05:14,782 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/configs\core.json
+2024-07-15 00:05:14,783 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/configs\core.json - features.chatbotFeatures.commandoEnabled: True
+2024-07-15 00:05:14,783 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/configs\core.json
+2024-07-15 00:05:14,783 - root - DEBUG - Applying changes to S:/server config test/SPT_Data/Server/database\hideout/settings.json.
+2024-07-15 00:05:14,784 - root - DEBUG - Applied change for S:/server config test/SPT_Data/Server/database\hideout/settings.json. - generatorSpeedWithoutFuel: 0.07
+2024-07-15 00:05:14,784 - root - INFO - Changes applied for S:/server config test/SPT_Data/Server/database\hideout/settings.json.

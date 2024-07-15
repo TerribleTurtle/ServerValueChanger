@@ -1,13 +1,13 @@
 import unittest
 import os
 import json
-import shutil
+import shutil  # Import shutil for file and directory operations
 import tkinter as tk
-from batch_apply import BatchApply
+from complex_config_handler import ComplexConfigHandler
 from config_manager import ConfigManager
 
-class TestBatchApply(unittest.TestCase):
-    """Test cases for the BatchApply class."""
+class TestComplexConfigHandler(unittest.TestCase):
+    """Test cases for the ComplexConfigHandler class."""
 
     @classmethod
     def setUpClass(cls):
@@ -18,13 +18,6 @@ class TestBatchApply(unittest.TestCase):
                 "paths": {
                     "server_database": "database",
                     "server_config": "configs"
-                },
-                "logging": {
-                    "level": "INFO",
-                    "file": "test_app.log"
-                },
-                "backup": {
-                    "directory": "backup"
                 }
             }))
 
@@ -35,9 +28,13 @@ class TestBatchApply(unittest.TestCase):
         os.makedirs('database', exist_ok=True)
         os.makedirs('configs', exist_ok=True)
 
-        cls.test_file_path = 'database/test_file.json'
+        cls.test_file_path = 'database/test_items.json'
         with open(cls.test_file_path, 'w', encoding='utf-8') as f:
-            json.dump({'key1': {'subkey1': 'value1'}, 'key2': {'subkey2': 'value2'}}, f)
+            json.dump({
+                'item1': {'_parent': '5485a8684bdc2da71d8b4567', '_props': {'StackMaxSize': 10}},
+                'item2': {'_parent': '5485a8684bdc2da71d8b4567', '_props': {'StackMaxSize': 20}},
+                'item3': {'_parent': 'some_other_parent', '_props': {'StackMaxSize': 30}}
+            }, f)
 
     @classmethod
     def tearDownClass(cls):
@@ -56,18 +53,12 @@ class TestBatchApply(unittest.TestCase):
     def setUp(self):
         """Set up for each test."""
         self.config_manager = ConfigManager(self.test_config_path, self.test_schema_path)
-        self.batch_apply = BatchApply(self.config_manager)
-        self.test_backup_dir = 'backup'
+        self.handler = ComplexConfigHandler(self.config_manager)
 
-    def tearDown(self):
-        """Clean up after each test."""
-        if os.path.exists(self.test_backup_dir):
-            shutil.rmtree(self.test_backup_dir)
-
-    def test_apply_changes(self):
-        """Test applying changes."""
-        settings = {'key1.subkey1': tk.Entry()}
-        settings['key1.subkey1'].insert(0, 'new_value1')
+    def test_update_ammo_stack_size(self):
+        """Test updating the ammo stack size."""
+        settings = {'_props.StackMaxSize': tk.Entry()}
+        settings['_props.StackMaxSize'].insert(0, '50')
         schema = {
             'tabs': {
                 'Tab1': {
@@ -76,12 +67,12 @@ class TestBatchApply(unittest.TestCase):
                             'column': 1,
                             'settings': [
                                 {
-                                    'label': 'Label1',
-                                    'file': 'database/test_file.json',
-                                    'key_path': 'key1.subkey1',
-                                    'type': 'string',
-                                    'default': 'value1',
-                                    'complex': False
+                                    'label': 'Ammo Stack Size',
+                                    'file': 'database/test_items.json',
+                                    'key_path': '_props.StackMaxSize',
+                                    'type': 'integer',
+                                    'default': 10,
+                                    'complex': True
                                 }
                             ]
                         }
@@ -90,11 +81,13 @@ class TestBatchApply(unittest.TestCase):
             }
         }
 
-        self.batch_apply.apply_changes(settings, schema)
+        self.handler.update_ammo_stack_size(settings, schema)
 
         with open(self.test_file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        self.assertEqual(data['key1']['subkey1'], 'new_value1')
+        self.assertEqual(data['item1']['_props']['StackMaxSize'], 50)
+        self.assertEqual(data['item2']['_props']['StackMaxSize'], 50)
+        self.assertEqual(data['item3']['_props']['StackMaxSize'], 30)
 
 if __name__ == '__main__':
     unittest.main()

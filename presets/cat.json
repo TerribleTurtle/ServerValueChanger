@@ -3,5 +3,6 @@
     "healthMultipliers.death": "100",
     "appearance.body.5d5e7e7586f77427997cfb7f": "100",
     "appearance.body.5cc2e5d014c02e15d53d9c03": "100",
-    "features.chatbotFeatures.commandoEnabled": false
+    "features.chatbotFeatures.commandoEnabled": false,
+    "generatorSpeedWithoutFuel": "0.07"
 }

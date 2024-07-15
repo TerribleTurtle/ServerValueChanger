@@ -105,7 +105,7 @@ class BatchApply:
                     logging.error("Error decoding JSON from file: %s", file_path)
                     raise  # Re-raise the exception to stop the process
                 except Exception as e:
-                    logging.error("Unexpected error applying changes to %s: %s", file_path, e)
+                    logging.error("Unexpected error applying changes to %s: %s", relative_path, e)
                     raise  # Re-raise the exception to stop the process
 
         except Exception as e:

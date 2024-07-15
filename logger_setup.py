@@ -48,10 +48,18 @@ class LoggerSetup:
         stream_handler = logging.StreamHandler()
 
         log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-        logging.basicConfig(level=log_level, format=log_format, handlers=[file_handler, stream_handler])
+        formatter = logging.Formatter(log_format)
+        file_handler.setFormatter(formatter)
+        stream_handler.setFormatter(formatter)
 
         root_logger = logging.getLogger()
         root_logger.setLevel(log_level)
+
+        # Clear existing handlers
+        root_logger.handlers = []
+
+        root_logger.addHandler(file_handler)
+        root_logger.addHandler(stream_handler)
 
         # Debug statements to verify configuration
         root_logger.debug("Logger configured with level: %s", log_level)

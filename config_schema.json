@@ -1,0 +1,123 @@
+{
+    "tabs": {
+        "Gameplay": {
+            "groups": {
+                "Ammo Settings": {
+                    "column": 1,
+                    "settings": [
+                        {
+                            "label": "Weapon Durability",
+                            "description": "The maximum number of ammo stacks.",
+                            "file": "database/templates/items.json",
+                            "key_path": "_props.StackMaxSize",
+                            "type": "integer",
+                            "default": 60,
+                            "criteria": {"_parent": "5485a8684bdc2da71d8b4567"},
+                            "complex": true,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Minimum",
+                                "top_label_visible": true,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Health Multiplier",
+                            "description": "The multiplier for health points.",
+                            "file": "configs/health.json",
+                            "key_path": "healthMultipliers.death",
+                            "type": "integer",
+                            "default": "0.3",
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 10,
+                                "inline_with_previous": true,
+                                "top_label": "Maximum",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        }
+                    ]
+                },
+                "Test": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "ArenaFighter",
+                            "description": "Random Value.",
+                            "file": "database/bots/types/arenafighter.json",
+                            "key_path": "appearance.body.5d5e7e7586f77427997cfb7f",
+                            "type": "integer",
+                            "default": true,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 20,
+                                "inline_with_previous": false,
+                                "top_label": "Arena Fighter",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        }
+                    ]
+                },
+                "Fart": {
+                    "column": 1,
+                    "settings": [
+                        {
+                            "label": "Arena Fighter- Feet",
+                            "description": "Random Value.",
+                            "file": "database/bots/types/arenafighter.json",
+                            "key_path": "appearance.body.5cc2e5d014c02e15d53d9c03",
+                            "type": "integer",
+                            "default": true,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 20,
+                                "inline_with_previous": false,
+                                "top_label": "Arena Fighter- Feet",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        }
+                    ]
+                }
+
+            }
+        },
+        "Features": {
+            "groups": {
+                "Chatbot Features": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "Commando Enabled",
+                            "description": "Enable or disable the Commando feature.",
+                            "file": "configs/core.json",
+                            "key_path": "features.chatbotFeatures.commandoEnabled",
+                            "type": "boolean",
+                            "default": true,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Commando",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

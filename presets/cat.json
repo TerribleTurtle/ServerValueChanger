@@ -1,0 +1,5 @@
+{
+    "_props.StackMaxSize": "500",
+    "features.chatbotFeatures.commandoEnabled": false,
+    "healthMultipliers.death": "50"
+}

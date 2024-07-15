@@ -6,7 +6,7 @@
                     "column": 1,
                     "settings": [
                         {
-                            "label": "Weapon Durability",
+                            "label": "Ammo - Max Stack Size",
                             "description": "The maximum number of ammo stacks.",
                             "file": "database/templates/items.json",
                             "key_path": "_props.StackMaxSize",
@@ -18,8 +18,8 @@
                                 "type": "entry",
                                 "widget_width": 10,
                                 "inline_with_previous": false,
-                                "top_label": "Minimum",
-                                "top_label_visible": true,
+                                "top_label": "Ammo - Max Stack Size",
+                                "top_label_visible": false,
                                 "left_label_visible": true
                             }
                         },
@@ -35,10 +35,10 @@
                             "ui_element": {
                                 "type": "entry",
                                 "widget_width": 10,
-                                "inline_with_previous": true,
-                                "top_label": "Maximum",
-                                "top_label_visible": true,
-                                "left_label_visible": false
+                                "inline_with_previous": false,
+                                "top_label": "Health Multiplier",
+                                "top_label_visible": false,
+                                "left_label_visible": true
                             }
                         }
                     ]
@@ -47,12 +47,12 @@
                     "column": 2,
                     "settings": [
                         {
-                            "label": "ArenaFighter",
+                            "label": "ArenaFighter - Body",
                             "description": "Random Value.",
                             "file": "database/bots/types/arenafighter.json",
                             "key_path": "appearance.body.5d5e7e7586f77427997cfb7f",
                             "type": "integer",
-                            "default": true,
+                            "default": "9",
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
@@ -75,7 +75,7 @@
                             "file": "database/bots/types/arenafighter.json",
                             "key_path": "appearance.body.5cc2e5d014c02e15d53d9c03",
                             "type": "integer",
-                            "default": true,
+                            "default": "8",
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
@@ -111,6 +111,33 @@
                                 "widget_width": 10,
                                 "inline_with_previous": false,
                                 "top_label": "Commando",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "Turds": {
+            "groups": {
+                "Toilet": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "Generator Speed Without Fuel",
+                            "description": "Higher numbers, faster crafting without fuel.",
+                            "file": "database/hideout/settings.json.",
+                            "key_path": "generatorSpeedWithoutFuel",
+                            "type": "integer",
+                            "default": "0.07",
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Generator Speed Without Fuel",
                                 "top_label_visible": false,
                                 "left_label_visible": true
                             }

@@ -36,7 +36,7 @@ class Application(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Server Value Changer")
-        self.geometry("850x1000")
+        self.geometry("850x850")
 
         self.config_manager = ConfigManager('config.json', 'config_schema.json')
         LoggerSetup(self.config_manager)
@@ -150,36 +150,31 @@ class Application(tk.Tk):
         self.tabs[tab_name].pack(side="top", fill="both", expand=True)
 
     def create_widget(self, setting, parent):
-        """
-        Creates a widget for a given setting.
-        """
         ui_element = setting['ui_element']
-
-        # Determine the row
         inline_with_previous = ui_element.get('inline_with_previous', False)
         if inline_with_previous:
-            row = len(parent.grid_slaves()) // 2 - 1  # Use the previous row
-            col = 2  # Place in the next available column
+            row = len(parent.grid_slaves()) // 2 - 1
+            col = 2
         else:
-            row = len(parent.grid_slaves()) // 2  # New row
+            row = len(parent.grid_slaves()) // 2
             col = 0
 
-        # Top label
         top_label_visible = ui_element.get('top_label_visible', False)
         if top_label_visible:
+            top_label_sticky = ui_element.get('top_label_sticky', 'ew')  # Default to 'ew' if not specified
             top_label = tk.Label(parent, text=ui_element.get('top_label', setting['label']))
-            top_label.grid(row=row * 2, column=col, columnspan=2, padx=5, pady=5, sticky="e")
+            top_label.grid(row=row * 2, column=col, columnspan=2, padx=5, pady=5, sticky=top_label_sticky)
             if 'description' in setting:
                 Tooltip(top_label, setting['description'])
             widget_row = row * 2 + 1
         else:
-            widget_row = row
+            widget_row = row * 2
 
-        # Left label
         left_label_visible = ui_element.get('left_label_visible', True)
         if left_label_visible:
+            left_label_sticky = ui_element.get('left_label_sticky', 'w')  # Default to 'w' if not specified
             left_label = tk.Label(parent, text=setting['label'])
-            left_label.grid(row=widget_row, column=col, padx=5, pady=5, sticky="e")
+            left_label.grid(row=widget_row, column=col, padx=5, pady=5, sticky=left_label_sticky)
             if 'description' in setting:
                 Tooltip(left_label, setting['description'])
             widget_col = col + 1
@@ -188,17 +183,16 @@ class Application(tk.Tk):
 
         if ui_element['type'] == 'entry':
             entry = tk.Entry(parent, width=ui_element.get('widget_width', 20))
-            entry.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="e")
+            entry.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="ew")
             self.settings[setting['key_path']] = entry
-            logging.debug("Created entry widget for %s with default %s",
-                          setting['key_path'], setting.get('default'))
         elif ui_element['type'] == 'checkbox':
             var = tk.BooleanVar()
             checkbox = tk.Checkbutton(parent, variable=var)
-            checkbox.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="e")
+            checkbox.grid(row=widget_row, column=widget_col, padx=5, pady=5, sticky="w")
             self.settings[setting['key_path']] = var
-            logging.debug("Created checkbox widget for %s with default %s",
-                          setting['key_path'], setting.get('default'))
+
+        parent.grid_columnconfigure(col, weight=1)
+        parent.grid_columnconfigure(widget_col, weight=1)
 
     def initialize_defaults(self):
         """

@@ -89,7 +89,9 @@ def save_changes() -> None:
                 "inline_with_previous": ui_inline_with_previous_checkbox_var.get(),
                 "top_label": ui_top_label_entry.get(),
                 "top_label_visible": ui_top_label_visible_checkbox_var.get(),
-                "left_label_visible": ui_left_label_visible_checkbox_var.get()
+                "top_label_sticky": ui_top_label_sticky_entry.get(),
+                "left_label_visible": ui_left_label_visible_checkbox_var.get(),
+                "left_label_sticky": ui_left_label_sticky_entry.get()
             }
         }
         settings_list = json_data['tabs'][tab_name]['groups'][group_name]['settings']
@@ -173,11 +175,13 @@ def populate_fields(event=None) -> None:
                 # Populate UI Element fields
                 ui_element = setting['ui_element']
                 ui_type_combobox.set(ui_element.get('type', ''))
-                ui_widget_width_entry.insert(0, ui_element.get('widget_width', ''))
+                ui_widget_width_entry.insert(0, ui_element.get('widget_width', 10))
                 ui_inline_with_previous_checkbox_var.set(ui_element.get('inline_with_previous', False))
                 ui_top_label_entry.insert(0, ui_element.get('top_label', ''))
                 ui_top_label_visible_checkbox_var.set(ui_element.get('top_label_visible', False))
+                ui_top_label_sticky_entry.insert(0, ui_element.get('top_label_sticky', 'ew'))
                 ui_left_label_visible_checkbox_var.set(ui_element.get('left_label_visible', False))
+                ui_left_label_sticky_entry.insert(0, ui_element.get('left_label_sticky', 'w'))
                 break
 
 
@@ -241,6 +245,8 @@ def clear_fields() -> None:
     ui_top_label_entry.delete(0, tk.END)
     ui_top_label_visible_checkbox_var.set(False)
     ui_left_label_visible_checkbox_var.set(False)
+    ui_top_label_sticky_entry.delete(0, tk.END)
+    ui_left_label_sticky_entry.delete(0, tk.END)
 
 
 def copy_label_to_top_label() -> None:
@@ -345,7 +351,7 @@ ui_top_label_label.grid(row=3, column=0, sticky=tk.W, padx=5, pady=5)
 ui_top_label_entry = ttk.Entry(ui_element_frame, width=30)
 ui_top_label_entry.grid(row=3, column=1, sticky='ew', padx=5, pady=5)
 copy_button = ttk.Button(ui_element_frame, text="Copy Label", command=copy_label_to_top_label)
-copy_button.grid(row=3, column=2, padx=5, pady=5)
+copy_button.grid(row=3, column=3, padx=5, pady=5)
 
 ui_top_label_visible_label = ttk.Label(ui_element_frame, text="Top Label Visible:")
 ui_top_label_visible_label.grid(row=4, column=0, sticky=tk.W, padx=5, pady=5)
@@ -353,20 +359,30 @@ ui_top_label_visible_checkbox_var = tk.BooleanVar()
 ui_top_label_visible_checkbox = ttk.Checkbutton(ui_element_frame, variable=ui_top_label_visible_checkbox_var)
 ui_top_label_visible_checkbox.grid(row=4, column=1, sticky='ew', padx=5, pady=5)
 
+ui_top_label_sticky_label = ttk.Label(ui_element_frame, text="Top Label Position:")
+ui_top_label_sticky_label.grid(row=5, column=0, sticky=tk.W, padx=5, pady=5)
+ui_top_label_sticky_entry = ttk.Entry(ui_element_frame, width=10)
+ui_top_label_sticky_entry.grid(row=5, column=1, sticky='ew', padx=5, pady=5)
+
 ui_left_label_visible_label = ttk.Label(ui_element_frame, text="Left Label Visible:")
-ui_left_label_visible_label.grid(row=5, column=0, sticky=tk.W, padx=5, pady=5)
+ui_left_label_visible_label.grid(row=6, column=0, sticky=tk.W, padx=5, pady=5)
 ui_left_label_visible_checkbox_var = tk.BooleanVar()
 ui_left_label_visible_checkbox = ttk.Checkbutton(ui_element_frame, variable=ui_left_label_visible_checkbox_var)
-ui_left_label_visible_checkbox.grid(row=5, column=1, sticky='ew', padx=5, pady=5)
+ui_left_label_visible_checkbox.grid(row=6, column=1, sticky='ew', padx=5, pady=5)
+
+ui_left_label_sticky_label = ttk.Label(ui_element_frame, text="Left Label Position:")
+ui_left_label_sticky_label.grid(row=7, column=0, sticky=tk.W, padx=5, pady=5)
+ui_left_label_sticky_entry = ttk.Entry(ui_element_frame, width=10)
+ui_left_label_sticky_entry.grid(row=7, column=1, sticky='ew', padx=5, pady=5)
 
 save_button = ttk.Button(mainframe, text="Save", command=save_changes)
-save_button.grid(row=7, column=0)
+save_button.grid(row=8, column=0)
 
 delete_button = ttk.Button(mainframe, text="Delete Selected Item", command=delete_item)
-delete_button.grid(row=7, column=1)
+delete_button.grid(row=8, column=1)
 
 clear_button = ttk.Button(mainframe, text="Clear Fields", command=clear_fields)
-clear_button.grid(row=7, column=2)
+clear_button.grid(row=8, column=2)
 
 # Expand the mainframe to accommodate more entries
 for i in range(8):
@@ -374,11 +390,14 @@ for i in range(8):
 for j in range(6):
     mainframe.grid_columnconfigure(j, weight=1)
 
+# Load configuration and display the tree view
 if not os.path.exists(CONFIG_FILE):
-    with open(CONFIG_FILE, 'w', encoding='utf-8') as json_file:
+    with open(CONFIG_FRILE, 'w', encoding='utf-8') as json_file:
         json.dump({"tabs": {}}, json_file)
 
 json_data = load_json(CONFIG_FILE)
 update_tree()
 
+# Run the main application loop
 root.mainloop()
+

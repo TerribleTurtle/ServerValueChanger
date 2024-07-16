@@ -231,7 +231,7 @@
                             "description": "COMPLEX - Set the global price multiplier for all items.",
                             "file": "configs/placeholder.json",
                             "key_path": "spot2",
-                            "type": "integer",
+                            "type": "float",
                             "default": 1.0,
                             "criteria": {},
                             "complex": false,
@@ -241,7 +241,9 @@
                                 "inline_with_previous": false,
                                 "top_label": "Global Price of Items",
                                 "top_label_visible": true,
-                                "left_label_visible": false
+                                "top_label_sticky": "w",
+                                "left_label_visible": false,
+                                "left_label_sticky": "w"
                             }
                         },
                         {
@@ -520,8 +522,10 @@
                                 "widget_width": 30,
                                 "inline_with_previous": false,
                                 "top_label": "Infinite Key Usage",
-                                "top_label_visible": true,
-                                "left_label_visible": false
+                                "top_label_visible": false,
+                                "top_label_sticky": "ew",
+                                "left_label_visible": true,
+                                "left_label_sticky": "w"
                             }
                         },
                         {
@@ -538,8 +542,8 @@
                                 "widget_width": 30,
                                 "inline_with_previous": false,
                                 "top_label": "Exclude Single Use Keys",
-                                "top_label_visible": true,
-                                "left_label_visible": false
+                                "top_label_visible": false,
+                                "left_label_visible": true
                             }
                         },
                         {
@@ -556,8 +560,8 @@
                                 "widget_width": 30,
                                 "inline_with_previous": false,
                                 "top_label": "Exclude Marked Room Keys",
-                                "top_label_visible": true,
-                                "left_label_visible": false
+                                "top_label_visible": false,
+                                "left_label_visible": true
                             }
                         }
                     ]
@@ -653,17 +657,17 @@
                             "key_path": "_props.StackMaxSize",
                             "type": "integer",
                             "default": 60,
-                            "criteria": {
-                                "_parent": "5485a8684bdc2da71d8b4567"
-                            },
+                            "criteria": {},
                             "complex": true,
                             "ui_element": {
                                 "type": "entry",
                                 "widget_width": 10,
                                 "inline_with_previous": false,
-                                "top_label": "Ammo - Max Stack Size",
-                                "top_label_visible": false,
-                                "left_label_visible": true
+                                "top_label": "Minimum",
+                                "top_label_visible": true,
+                                "top_label_sticky": "e",
+                                "left_label_visible": true,
+                                "left_label_sticky": "w"
                             }
                         },
                         {
@@ -671,17 +675,17 @@
                             "description": "The multiplier for health points.",
                             "file": "configs/health.json",
                             "key_path": "healthMultipliers.death",
-                            "type": "integer",
+                            "type": "float",
                             "default": 0.3,
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
                                 "type": "entry",
                                 "widget_width": 10,
-                                "inline_with_previous": false,
+                                "inline_with_previous": true,
                                 "top_label": "Health Multiplier",
-                                "top_label_visible": false,
-                                "left_label_visible": true
+                                "top_label_visible": true,
+                                "left_label_visible": false
                             }
                         }
                     ]

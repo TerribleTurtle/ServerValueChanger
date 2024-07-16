@@ -1,5 +1,646 @@
 {
     "tabs": {
+        "Inventory & Items": {
+            "groups": {
+                "Miscellaneous": {
+                    "column": 1,
+                    "settings": [
+                        {
+                            "label": "All Items Examined",
+                            "description": "COMPLEX - Set all items to examined (except keys)",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot1",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "All Items Examined",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "All Keys Examined",
+                            "description": "COMPLEX - Set all keys to examined (except other items)",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot2",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": true,
+                                "top_label": "All Keys Examined",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Allow Armored Rigs with Armors",
+                            "description": "COMPLEX - Allow armored rigs to be used with regular armor",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot12",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Allow Armored Rigs with Armors",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Remove Backpack Restrictions",
+                            "description": "COMPLEX - Remove restrictions on backpacks",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot13",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Remove Backpack Restrictions",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Remove Secure Container Filters",
+                            "description": "COMPLEX - Remove filters for secure containers",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot14",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Remove Secure Container Filters",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Remove In-Raid Restrictions",
+                            "description": "COMPLEX - Remove restrictions that apply in-raid",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot15",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Remove In-Raid Restrictions",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Remove Movement Penalty from Gear",
+                            "description": "COMPLEX - Remove movement speed penalty from gear",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot16",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Remove Movement Penalty from Gear",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Remove `Can't be Dropped in Raid` Tag",
+                            "description": "COMPLEX - Remove the 'Can't be dropped in raid' tag",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot17",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Remove `Can't be Dropped in Raid` Tag",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Allow Pistols on Primary Slots",
+                            "description": "COMPLEX - Allow pistols to be used in primary weapon slots",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot18",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Allow Pistols on Primary Slots",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Allow SMGs in Holster Slot",
+                            "description": "COMPLEX - Allow submachine guns to be used in the holster slot",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot19",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Allow SMGs in Holster Slot",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Turn off Weapon Overheat",
+                            "description": "COMPLEX - Disable weapon overheating mechanics",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot20",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Turn off Weapon Overheat",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        },
+                        {
+                            "label": "Allow Signal Pistol into Special Slot",
+                            "description": "COMPLEX - Allow signal pistols to be used in the special slot",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot21",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 10,
+                                "inline_with_previous": false,
+                                "top_label": "Allow Signal Pistol into Special Slot",
+                                "top_label_visible": false,
+                                "left_label_visible": true
+                            }
+                        }
+                    ]
+                },
+                "Multipliers": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "Global Price of Items",
+                            "description": "COMPLEX - Set the global price multiplier for all items.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot2",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Global Price of Items",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Items Weight",
+                            "description": "COMPLEX - Set the weight multiplier for items.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot3",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Items Weight",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "EXP Acquired for Picking Up Items",
+                            "description": "COMPLEX - Set the EXP multiplier for picking up items.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot4",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "EXP Acquired for Picking Up Items",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "EXP Acquired for Examining Items",
+                            "description": "COMPLEX - Set the EXP multiplier for examining items.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot5",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "EXP Acquired for Examining Items",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Weapon Malfunction Chance",
+                            "description": "COMPLEX - Set the weapon malfunction chance multiplier.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot6",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Weapon Malfunction Chance",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Weapon Misfire Chance",
+                            "description": "COMPLEX - Set the weapon misfire chance multiplier.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot7",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Weapon Misfire Chance",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Time to Load/Unload Magazines in the Raid",
+                            "description": "COMPLEX - Set the time multiplier for loading/unloading magazines in the raid.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot8",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Time to Load/Unload Magazines in the Raid",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Time to Examine an Item",
+                            "description": "COMPLEX - Set the time multiplier for examining an item.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot9",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Time to Examine an Item",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Heat Factor",
+                            "description": "COMPLEX - Set the heat factor multiplier.",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot10",
+                            "type": "integer",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Heat Factor",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        }
+                    ]
+                },
+                "Maximum Currency Stack": {
+                    "column": 1,
+                    "settings": [
+                        {
+                            "label": "Roubles",
+                            "description": "COMPLEX - Changes max stack for Roubles",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot22",
+                            "type": "integer",
+                            "default": 500000,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Roubles",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Dollars",
+                            "description": "COMPLEX - Changes max stack for Roubles",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot23",
+                            "type": "integer",
+                            "default": 50000,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Dollars",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Euros",
+                            "description": "COMPLEX - Changes max stack for Roubles",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot24",
+                            "type": "integer",
+                            "default": 50000,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Euros",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        }
+                    ]
+                },
+                "Keys": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "Key Use Multiplier",
+                            "description": "COMPLEX -Key Use Multiplier",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot30",
+                            "type": "float",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Key Use Multiplier",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Keycard Use Multiplier",
+                            "description": "COMPLEX - Keycard Multiplier",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot31",
+                            "type": "float",
+                            "default": 1.0,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Keycard Use Multiplier",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Key Max Use Limit",
+                            "description": "COMPLEX - Sete a limit on how many uses a key can have",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot32",
+                            "type": "integer",
+                            "default": 40,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Key Max Use Limit",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Infinite Key Usage",
+                            "description": "COMPLEX - Let you use a key forever",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot33",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Infinite Key Usage",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Exclude Single Use Keys",
+                            "description": "COMPLEX - excludes single use key from above settings",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot500",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Exclude Single Use Keys",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Exclude Marked Room Keys",
+                            "description": "COMPLEX - Exclude Marked Room Keys",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot34",
+                            "type": "boolean",
+                            "default": false,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "checkbox",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Exclude Marked Room Keys",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        }
+                    ]
+                },
+                "Ammo Stacks": {
+                    "column": 2,
+                    "settings": [
+                        {
+                            "label": "Pistol/SMG Rounds",
+                            "description": "COMPLEX - Set max stack for Pistol and SMG rounds",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot50",
+                            "type": "integer",
+                            "default": 50,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Pistol/SMG Rounds",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Shoutgun Rounds",
+                            "description": "COMPLEX - Set max stack for shotgun rounds",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot36",
+                            "type": "integer",
+                            "default": 20,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Shoutgun Rounds",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Assault Rifle Rounds",
+                            "description": "COMPLEX - Set max stack for Assault Rifle rounds",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot51",
+                            "type": "integer",
+                            "default": 60,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Assault Rifle Rounds",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        },
+                        {
+                            "label": "Marksman Rifle Rounds",
+                            "description": "COMPLEX - Set max stack for Marksman Rifle rounds",
+                            "file": "configs/placeholder.json",
+                            "key_path": "spot37",
+                            "type": "integer",
+                            "default": 40,
+                            "criteria": {},
+                            "complex": false,
+                            "ui_element": {
+                                "type": "entry",
+                                "widget_width": 30,
+                                "inline_with_previous": false,
+                                "top_label": "Marksman Rifle Rounds",
+                                "top_label_visible": true,
+                                "left_label_visible": false
+                            }
+                        }
+                    ]
+                }
+            }
+        },
         "Gameplay": {
             "groups": {
                 "Ammo Settings": {
@@ -12,7 +653,9 @@
                             "key_path": "_props.StackMaxSize",
                             "type": "integer",
                             "default": 60,
-                            "criteria": {"_parent": "5485a8684bdc2da71d8b4567"},
+                            "criteria": {
+                                "_parent": "5485a8684bdc2da71d8b4567"
+                            },
                             "complex": true,
                             "ui_element": {
                                 "type": "entry",
@@ -29,7 +672,7 @@
                             "file": "configs/health.json",
                             "key_path": "healthMultipliers.death",
                             "type": "integer",
-                            "default": "0.3",
+                            "default": 0.3,
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
@@ -52,7 +695,7 @@
                             "file": "database/bots/types/arenafighter.json",
                             "key_path": "appearance.body.5d5e7e7586f77427997cfb7f",
                             "type": "integer",
-                            "default": "9",
+                            "default": 9,
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
@@ -70,26 +713,25 @@
                     "column": 1,
                     "settings": [
                         {
-                            "label": "Arena Fighter- Feet",
+                            "label": "Arena Fighter - Feet",
                             "description": "Random Value.",
                             "file": "database/bots/types/arenafighter.json",
                             "key_path": "appearance.body.5cc2e5d014c02e15d53d9c03",
                             "type": "integer",
-                            "default": "8",
+                            "default": 8,
                             "criteria": {},
                             "complex": false,
                             "ui_element": {
                                 "type": "entry",
                                 "widget_width": 20,
                                 "inline_with_previous": false,
-                                "top_label": "Arena Fighter- Feet",
+                                "top_label": "Arena Fighter - Feet",
                                 "top_label_visible": false,
                                 "left_label_visible": true
                             }
                         }
                     ]
                 }
-
             }
         },
         "Features": {
@@ -111,33 +753,6 @@
                                 "widget_width": 10,
                                 "inline_with_previous": false,
                                 "top_label": "Commando",
-                                "top_label_visible": false,
-                                "left_label_visible": true
-                            }
-                        }
-                    ]
-                }
-            }
-        },
-        "Turds": {
-            "groups": {
-                "Toilet": {
-                    "column": 2,
-                    "settings": [
-                        {
-                            "label": "Generator Speed Without Fuel",
-                            "description": "Higher numbers, faster crafting without fuel.",
-                            "file": "database/hideout/settings.json.",
-                            "key_path": "generatorSpeedWithoutFuel",
-                            "type": "integer",
-                            "default": "0.07",
-                            "criteria": {},
-                            "complex": false,
-                            "ui_element": {
-                                "type": "entry",
-                                "widget_width": 10,
-                                "inline_with_previous": false,
-                                "top_label": "Generator Speed Without Fuel",
                                 "top_label_visible": false,
                                 "left_label_visible": true
                             }

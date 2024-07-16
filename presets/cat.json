@@ -1,8 +1,26 @@
 {
-    "_props.StackMaxSize": "100",
-    "healthMultipliers.death": "100",
-    "appearance.body.5d5e7e7586f77427997cfb7f": "100",
-    "appearance.body.5cc2e5d014c02e15d53d9c03": "100",
-    "features.chatbotFeatures.commandoEnabled": false,
-    "generatorSpeedWithoutFuel": "0.07"
+    "_props.StackMaxSize": {
+        "label": "Ammo - Max Stack Size",
+        "value": "100"
+    },
+    "healthMultipliers.death": {
+        "label": "Health Multiplier",
+        "value": "100"
+    },
+    "appearance.body.5d5e7e7586f77427997cfb7f": {
+        "label": "ArenaFighter - Body",
+        "value": "100"
+    },
+    "appearance.body.5cc2e5d014c02e15d53d9c03": {
+        "label": "Arena Fighter- Feet",
+        "value": "100"
+    },
+    "features.chatbotFeatures.commandoEnabled": {
+        "label": "Commando Enabled",
+        "value": true
+    },
+    "generatorSpeedWithoutFuel": {
+        "label": "Generator Speed Without Fuel",
+        "value": "0.07"
+    }
 }

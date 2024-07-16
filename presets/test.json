@@ -1,0 +1,150 @@
+{
+    "spot1": {
+        "label": "All Items Examined",
+        "value": true
+    },
+    "spot2": {
+        "label": "Global Price of Items",
+        "value": "2"
+    },
+    "spot12": {
+        "label": "Allow Armored Rigs with Armors",
+        "value": true
+    },
+    "spot13": {
+        "label": "Remove Backpack Restrictions",
+        "value": true
+    },
+    "spot14": {
+        "label": "Remove Secure Container Filters",
+        "value": true
+    },
+    "spot15": {
+        "label": "Remove In-Raid Restrictions",
+        "value": true
+    },
+    "spot16": {
+        "label": "Remove Movement Penalty from Gear",
+        "value": true
+    },
+    "spot17": {
+        "label": "Remove `Can't be Dropped in Raid` Tag",
+        "value": true
+    },
+    "spot18": {
+        "label": "Allow Pistols on Primary Slots",
+        "value": true
+    },
+    "spot19": {
+        "label": "Allow SMGs in Holster Slot",
+        "value": true
+    },
+    "spot20": {
+        "label": "Turn off Weapon Overheat",
+        "value": true
+    },
+    "spot21": {
+        "label": "Allow Signal Pistol into Special Slot",
+        "value": true
+    },
+    "spot3": {
+        "label": "Items Weight",
+        "value": "2"
+    },
+    "spot4": {
+        "label": "EXP Acquired for Picking Up Items",
+        "value": "2"
+    },
+    "spot5": {
+        "label": "EXP Acquired for Examining Items",
+        "value": "2"
+    },
+    "spot6": {
+        "label": "Weapon Malfunction Chance",
+        "value": "2"
+    },
+    "spot7": {
+        "label": "Weapon Misfire Chance",
+        "value": "2"
+    },
+    "spot8": {
+        "label": "Time to Load/Unload Magazines in the Raid",
+        "value": "2"
+    },
+    "spot9": {
+        "label": "Time to Examine an Item",
+        "value": "2"
+    },
+    "spot10": {
+        "label": "Heat Factor",
+        "value": "2"
+    },
+    "spot22": {
+        "label": "Roubles",
+        "value": "2"
+    },
+    "spot23": {
+        "label": "Dollars",
+        "value": "2"
+    },
+    "spot24": {
+        "label": "Euros",
+        "value": "2"
+    },
+    "spot30": {
+        "label": "Key Use Multiplier",
+        "value": "2"
+    },
+    "spot31": {
+        "label": "Keycard Use Multiplier",
+        "value": "2"
+    },
+    "spot32": {
+        "label": "Key Max Use Limit",
+        "value": "2"
+    },
+    "spot33": {
+        "label": "Exclude Single Use Keys",
+        "value": true
+    },
+    "spot34": {
+        "label": "Exclude Marked Room Keys",
+        "value": true
+    },
+    "spot50": {
+        "label": "Pistol/SMG Rounds",
+        "value": "50"
+    },
+    "spot36": {
+        "label": "Shoutgun Rounds",
+        "value": "20"
+    },
+    "spot51": {
+        "label": "Assault Rifle Rounds",
+        "value": "60"
+    },
+    "spot37": {
+        "label": "Marksman Rifle Rounds",
+        "value": "40"
+    },
+    "_props.StackMaxSize": {
+        "label": "Ammo - Max Stack Size",
+        "value": "60"
+    },
+    "healthMultipliers.death": {
+        "label": "Health Multiplier",
+        "value": "0.3"
+    },
+    "appearance.body.5d5e7e7586f77427997cfb7f": {
+        "label": "ArenaFighter - Body",
+        "value": "9"
+    },
+    "appearance.body.5cc2e5d014c02e15d53d9c03": {
+        "label": "Arena Fighter - Feet",
+        "value": "8"
+    },
+    "features.chatbotFeatures.commandoEnabled": {
+        "label": "Commando Enabled",
+        "value": true
+    }
+}

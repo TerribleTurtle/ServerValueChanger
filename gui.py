@@ -35,8 +35,8 @@ class Application(tk.Tk):
 
     def __init__(self):
         super().__init__()
-        self.title("JSON Configuration Editor")
-        self.geometry("800x600")
+        self.title("Server Value Changer")
+        self.geometry("850x1000")
 
         self.config_manager = ConfigManager('config.json', 'config_schema.json')
         LoggerSetup(self.config_manager)
@@ -50,6 +50,8 @@ class Application(tk.Tk):
 
         logging.debug("Initializing defaults")
         self.initialize_defaults()
+
+        self.center_window()
 
     def create_widgets(self):
         """
@@ -67,8 +69,29 @@ class Application(tk.Tk):
         self.tab_listbox.bind("<<ListboxSelect>>", self.on_tab_select)
 
         # Right panel for tab content
-        self.tab_content = tk.Frame(main_frame)
-        self.tab_content.pack(side="right", expand=True, fill="both")
+        right_panel = tk.Frame(main_frame)
+        right_panel.pack(side="right", expand=True, fill="both")
+
+        # Canvas and scrollbar for right panel
+        self.canvas = tk.Canvas(right_panel)
+        self.scrollbar = tk.Scrollbar(right_panel, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = tk.Frame(self.canvas)
+
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(
+                scrollregion=self.canvas.bbox("all")
+            )
+        )
+
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scrollbar.pack(side="right", fill="y")
+
+        # Bind mouse wheel events
+        self.bind_mouse_wheel()
 
         self.tabs = {}
         self.settings = {}
@@ -76,7 +99,7 @@ class Application(tk.Tk):
         schema = self.config_manager.get_schema()
         for tab_name, tab_data in schema['tabs'].items():
             if tab_name not in self.tabs:
-                self.tabs[tab_name] = tk.Frame(self.tab_content)
+                self.tabs[tab_name] = tk.Frame(self.scrollable_frame)
                 self.tabs[tab_name].pack(side="top", fill="both", expand=True)
                 self.tab_listbox.insert("end", tab_name)
                 self.tabs[tab_name].grid_columnconfigure(0, weight=1)
@@ -223,6 +246,39 @@ class Application(tk.Tk):
             messagebox.showinfo("Info", "Preset loaded successfully.")
         else:
             messagebox.showerror("Error", "Failed to load preset.")
+
+    def center_window(self):
+        """
+        Centers the window on the screen.
+        """
+        self.update_idletasks()  # Update "requested size" from geometry manager
+
+        window_width = self.winfo_width()
+        window_height = self.winfo_height()
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+
+        x = (screen_width // 2) - (window_width // 2)
+        y = (screen_height // 2) - (window_height // 2)
+
+        self.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+    def bind_mouse_wheel(self):
+        """
+        Binds the mouse wheel to the canvas scrollbar.
+        """
+        self.canvas.bind_all("<MouseWheel>", self.on_mouse_wheel)
+        self.canvas.bind_all("<Button-4>", self.on_mouse_wheel)
+        self.canvas.bind_all("<Button-5>", self.on_mouse_wheel)
+
+    def on_mouse_wheel(self, event):
+        """
+        Handles the mouse wheel event for scrolling.
+        """
+        if event.num == 5 or event.delta == -120:
+            self.canvas.yview_scroll(1, "units")
+        elif event.num == 4 or event.delta == 120:
+            self.canvas.yview_scroll(-1, "units")
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
